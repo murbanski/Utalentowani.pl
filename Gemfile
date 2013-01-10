@@ -40,6 +40,9 @@ gem 'spork', '0.9.2'
   # gem 'growl', '1.0.3'
 end
 
+gem 'pry-rails'
+gem 'launchy'
+
 group :production do
   gem 'pg', '0.12.2'
 end
