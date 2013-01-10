@@ -1,0 +1,186 @@
+@import 'bootstrap';
+/* mixins, variables, etc. */
+$grayMediumLight: #eaeaea;
+
+@mixin box_sizing {
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;}
+
+
+/* Uniwersalne */
+html {
+overflow-y: scroll;
+}
+
+body {
+padding-top: 60px;
+}
+
+section{
+	overflow-y: auto;
+}
+textarea {
+resize: vertical;
+}
+.center{
+	text-align: center;
+
+}
+h1{
+	margin-bottom: 10px;
+}
+
+/* typografia */
+
+h1, h2, h3, h4, h5, h5{
+	line-height: 1;
+}
+h1{
+	font-size: 3em;
+	letter-spacing: -2px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+h2{
+	font-size: 1.7em;
+	letter-spacing: -1px;
+	margin-bottom: 30px;
+	text-align:center
+}
+
+p{
+	font-size: 1.1em;
+	line-height: 1.7em;
+}
+
+/* Nagłówek */
+#logo{
+float: left;
+color: white;
+font-size: 1.7em;
+margin-right: 10px;
+text-transform: uppercase;
+letter-spacing: -1px;
+padding-top: 9px;
+font-weight: bold;
+&:hover{
+	color: white;
+	text-decoration: none;
+}
+}
+.row{
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	width: 80%;
+}
+
+#powitanie{}
+
+/* Stopka */
+footer {
+margin-top: 45px;
+padding-top: 5px;
+border-top: 2px solid $grayMediumLight;
+color: $grayLight;
+a {
+color: $gray;
+&:hover {
+color: $grayDarker;
+text-decoration: none;
+}
+}
+small {
+float: left;
+margin-left: 10px;
+}
+ul {
+float: right;
+list-style: none;
+margin-right: 10px;
+
+li {
+float: left;
+margin-left: 10px;
+
+}
+}
+}
+.pomoc{
+	text-align: center;
+}
+.debug_dump {
+	clear: both;
+	float: left;
+	width: 100%;
+	margin-top: 45px;
+	@include box_sizing;
+}
+.gravatar {
+	float: left;
+	margin-right: 10px;
+}
+ /* sidebar */
+ aside {
+ 	section {
+ 		padding: 10px 0;
+ 		border-top: 2px solid $grayLighter;
+ 		
+ 	}
+ 	span{
+ 		display: block;
+ 		margin-bottom: 3px;
+ 		line-height: 1px;
+ 	}
+ 	h1 {
+ 		font-size: 1.6em;
+ 		text-align: left;
+ 		letter-spacing: -1px;
+ 		margin-bottom: 3px;
+ 	}
+ }
+ /* forms */
+
+ input, textarea, select, uneditable-input {
+ 	border: 2px solid #bbb;
+ 	width: 100%;
+ 	padding: 10px;
+ 	height: auto;
+ 	text-align: center;
+ 	
+
+ }
+.logowanie{
+	margin-right: auto;
+	margin-left: 150px;
+	
+	#error_explanation{
+		color: #f00;
+		text-align: center;
+		ul{
+			list-style: none;
+			margin: 0 0 18px 0;
+		}
+
+
+
+	}
+	.field_with_errors {
+		@extend .control-group;
+		@extend .error;
+	}
+
+}
+
+.powitanie{
+	margin-right:auto;
+	margin-left: auto;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-bottom: 10px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+}
